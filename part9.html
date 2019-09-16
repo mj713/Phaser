@@ -160,21 +160,27 @@ function update() {
     {
         console.log('A');
         girl.body.velocity.x = -300;
-        player.animations.play('right');
+        girl.animations.play('right');
     }
     else if (keyD.isDown)
     {
         console.log('D');
         girl.body.velocity.x = 300;
-        player.animations.play('left');       
+        girl.animations.play('left');       
     }
-        if (keyW.isDown)
+        else if (keyW.isDown)
     {
         console.log('W');
         girl.body.velocity.y = -200;
-        player.animations.play('right');
+        girl.animations.play('right');
     }
-    
+        else
+    {
+        //  Stand still
+        girl.animations.stop();
+
+        girl.frame = 1;
+    }
     
     
     
