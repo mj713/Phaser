@@ -171,14 +171,15 @@ function update() {
         else if (keyW.isDown)
     {
         console.log('W');
-        girl.body.velocity.y = -200;
-        girl.animations.play('right');
+        girl.body.velocity.y = -300;
+        girl.animations.play('right');   
     }
         else
     {
         //  Stand still
         girl.animations.stop();
-
+	girl.body.velocity.x = 0
+	 girl.body.velocity.y = 0  
         girl.frame = 1;
     }
     
